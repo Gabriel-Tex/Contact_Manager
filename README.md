@@ -17,5 +17,7 @@ Notas referentes aos conceitos e features da linguagem C++ nos quais me aprofund
     * no-const e const lvalue reference
     * ponteiros
 * [Maps](notes/map.md)
+* [Operator Overloading](notes/operatorOverloading.md)
+* [Friend Functions](notes/friendFunctions.md)
 
 OBS.: nem todos os assuntos e recursos das notas foram/serão utilizados no desenvolvimento do projeto. As anotações são baseadas num estudo geral de cada tópico realizado antes do desenvolvimento, que geralmente são capítulos compreendidos em https://www.learncpp.com.

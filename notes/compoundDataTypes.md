@@ -746,7 +746,7 @@ std::cout << o2.value();
 std::cout << o3.value_or(42);
 ```
 
-* *o1 → direto (⚠️ UB se vazio)
+* *o1 → direto (UB se vazio)
 * value() → lança exceção se vazio
 * value_or(42) → usa valor padrão
 
