@@ -2,7 +2,6 @@
 
 ### Introducing std::string
 
-
 ```
 #include <string> // allows use of std::string
 
