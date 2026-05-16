@@ -1,18 +1,26 @@
+/* ============== ROOT ============== */
+
 :root {
   --spacing: 1.5rem;
+
   --link-dark-color: rgb(0, 83, 134);
   --link-light-color: rgb(156, 217, 255);
+
   --clr-white: rgb(245, 245, 255);
   --clr-black: rgb(0, 0, 30);
   --clr-light-gray: rgb(230, 230, 245);
+
   --clr-dark-shadow-5: rgba(0, 0, 10, 5%);
   --clr-dark-shadow-10: rgba(0, 0, 10, 10%);
   --clr-dark-shadow-20: rgba(0, 0, 10, 20%);
+
   --clr-light-shadow-5: rgba(200, 200, 255, 5%);
   --clr-light-shadow-10: rgba(200, 200, 255, 10%);
   --clr-light-shadow-20: rgba(200, 200, 255, 20%);
+
   --main-page-width: 120rem;
   --table-min-width: 60rem;
+
   --biggest-font-size: 5rem;
   --bigger-font-size: 4rem;
   --big-font-size: 3.2rem;
@@ -20,11 +28,15 @@
   --small-font-size: 1.6rem;
   --smaller-font-size: 1.4rem;
   --smallest-font-size: 1.2rem;
+
   --transition-fast: 300ms;
   --transition-medium: 600ms;
   --transition-slow: 1s;
+
   --default-border-radius: 4px;
 }
+
+/* ============== RESET ============== */
 
 *,
 *::before,
@@ -34,6 +46,8 @@
   box-sizing: border-box;
 }
 
+/* ============== BASE ============== */
+
 html {
   font-size: 62.5%;
 }
@@ -41,11 +55,14 @@ html {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
   line-height: 1.5;
   font-size: var(--small-font-size);
+
   color: var(--clr-black);
-  -webkit-font-smoothing: antialiased;
   background: var(--clr-light-gray);
+
+  -webkit-font-smoothing: antialiased;
 }
 
 img,
@@ -54,12 +71,17 @@ svg {
   max-width: 100%;
 }
 
+/* ============== HEADER ============== */
+
 .header {
-  background: var(--clr-black);
-  padding: var(--spacing);
-  box-shadow: 0 5px 10px 2px var(--clr-dark-shadow-20);
-  z-index: 1;
   position: relative;
+  z-index: 1;
+
+  padding: var(--spacing);
+
+  background: var(--clr-black);
+
+  box-shadow: 0 5px 10px 2px var(--clr-dark-shadow-20);
 }
 
 .header-heading {
@@ -70,6 +92,7 @@ svg {
 .header-link {
   color: var(--link-light-color);
   text-decoration: none;
+
   transition: filter var(--transition-fast) ease-in-out;
 }
 
@@ -77,38 +100,53 @@ svg {
   filter: brightness(70%);
 }
 
+/* ============== MENU ============== */
+
 .menu {
   margin: var(--spacing);
 }
 
 .menu-list {
-  list-style: none;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+
+  list-style: none;
 }
 
 .menu-link {
   display: block;
+
   padding: var(--spacing);
+
   color: var(--link-light-color);
   text-decoration: none;
-  transition: background-color var(--transition-fast) ease-in-out;
+
   border-radius: var(--default-border-radius);
+
+  transition: background-color var(--transition-fast) ease-in-out;
 }
 
 .menu-link:hover {
   background: var(--clr-light-shadow-10);
 }
 
+/* ============== CONTENT ============== */
+
 .content {
   max-width: var(--main-page-width);
+
   margin: calc(var(--spacing) * 2) auto;
   padding: var(--spacing);
+
   background: var(--clr-white);
-  box-shadow: 2px 2px 5px var(--clr-dark-shadow-20);
+
   border-radius: var(--default-border-radius);
+
+  box-shadow: 2px 2px 5px var(--clr-dark-shadow-20);
 }
+
+/* ============== TABLE ============== */
 
 .responsive-table {
   width: 100%;
@@ -118,18 +156,21 @@ svg {
 .contacts-table {
   width: 100%;
   min-width: var(--table-min-width);
+
   border-collapse: collapse;
 }
 
 .table-caption {
+  padding: var(--spacing);
+
   font-size: var(--medium-font-size);
   font-weight: bold;
-  padding: var(--spacing);
 }
 
 .table-row {
   text-align: left;
   text-overflow: ellipsis;
+
   transition: background-color var(--transition-fast) ease-in-out;
 }
 
@@ -142,8 +183,8 @@ svg {
 }
 
 .table-row-header {
-  background: var(--clr-light-gray);
   color: var(--clr-black);
+  background: var(--clr-light-gray);
 }
 
 .table-cel,
@@ -153,20 +194,17 @@ svg {
 
 .table-link {
   color: var(--link-dark-color);
-  transition: color var(--transition-fast) ease-in-out;
   text-decoration: none;
+
+  transition: color var(--transition-fast) ease-in-out;
 }
 
 .table-link:hover {
   color: var(--clr-black);
 }
 
-@media (min-width: 600px) {
-  .single-contact {
-    max-width: 80%;
-    margin: calc(var(--spacing) * 2) auto;
-  }
-}
+/* ============== SINGLE CONTACT ============== */
+
 
 .single-contact h1 {
   margin: 1rem 0;
@@ -176,11 +214,15 @@ svg {
   margin: 1rem 0;
 }
 
+/* ============== PAGINATION ============== */
+
 .pagination {
-  margin-top: var(--spacing);
   display: flex;
   justify-content: center;
+
+  margin-top: var(--spacing);
   padding: calc(var(--spacing) * 0.8);
+
   font-size: var(--small-font-size);
 }
 
@@ -190,11 +232,15 @@ svg {
 }
 
 .pagination .step-links a {
-  color: var(--link-dark-color);
-  transition: color var(--transition-fast) ease-in-out;
-  text-decoration: none;
   display: block;
+
+  color: var(--link-dark-color);
+  text-decoration: none;
+
+  transition: color var(--transition-fast) ease-in-out;
 }
+
+/* ============== SEARCH ============== */
 
 .search {
   display: flex;
@@ -202,25 +248,35 @@ svg {
 }
 
 .search-input {
-  font-size: var(--medium-font-size);
-  padding: 1rem 2rem;
   width: 100%;
   max-width: 32rem;
-  border-radius: var(--default-border-radius);
+
+  padding: 1rem 2rem;
+
+  font-size: var(--medium-font-size);
+
   border: 1px solid var(--link-light-color);
+  border-radius: var(--default-border-radius);
 }
 
 .search-input:focus {
   box-shadow: 0 0 15px var(--link-light-color);
 }
 
+/* ============== MESSAGES ============== */
+
 .message {
   max-width: 600px;
+
   margin: var(--spacing) auto;
   margin-top: calc(var(--spacing) * 2);
+
   padding: var(--spacing);
+
   text-align: center;
+
   border-radius: var(--default-border-radius);
+
   font-size: var(--smaller-font-size);
 }
 
@@ -244,6 +300,8 @@ svg {
   border: 1px solid rgba(0, 0, 255, 0.3);
 }
 
+/* ============== FORMS ============== */
+
 .form-wrapper {
   max-width: 60rem;
   margin: var(--spacing) auto;
@@ -256,25 +314,24 @@ svg {
 .form-group {
   display: flex;
   flex-direction: column;
+
   padding-bottom: var(--spacing);
-}
-.errorlist {
-  list-style: none;
-  font-size: var(--smaller-font-size);
-  color: tomato;
-}
-.errorlist.nonfield {
-  color: inherit;
 }
 
 .form-group p {
   margin: 1em 0;
 }
 
+.form-group label {
+  font-size: var(--smaller-font-size);
+}
+
 .form-group .help-text,
 .form-group .help-text ~ ul {
   margin: 0;
+
   font-size: var(--smallest-font-size);
+
   list-style: none;
 }
 
@@ -282,8 +339,9 @@ svg {
 .form-group textarea,
 .form-group select {
   padding: 1rem;
-  border-radius: var(--default-border-radius);
+
   border: 1px solid var(--link-dark-color);
+  border-radius: var(--default-border-radius);
 }
 
 .form-group input:focus,
@@ -293,18 +351,35 @@ svg {
   box-shadow: 0 0 5px var(--link-dark-color);
 }
 
-.form-group label {
+/* ============== ERRORS ============== */
+
+.errorlist {
+  list-style: none;
+
   font-size: var(--smaller-font-size);
+
+  color: tomato;
 }
 
+.errorlist.nonfield {
+  color: inherit;
+}
+
+/* ============== BUTTONS ============== */
+
 .btn {
-  background-color: var(--link-dark-color);
-  color: var(--clr-white);
-  font-weight: bold;
-  border: none;
   padding: 1rem 2rem;
+
+  color: var(--clr-white);
+  background-color: var(--link-dark-color);
+
+  font-weight: bold;
+
+  border: none;
   border-radius: var(--default-border-radius);
+
   cursor: pointer;
+
   transition: filter var(--transition-fast) ease-in-out;
 }
 
@@ -318,22 +393,39 @@ svg {
   box-shadow: 0 0 5px var(--link-dark-color);
 }
 
-.contact-links {
-  margin-block: calc(var(--small-font-size) * 2);
-  display: flex;
-  align-items: center;
-  gap: 0 var(--spacing);
-}
-
 .btn-link {
-  font-size: var(--small-font-size);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 1rem;
   display: block;
+
+  padding: 1rem;
+
+  font-size: var(--small-font-size);
+  font-weight: bold;
   line-height: var(--small-font-size);
+
+  text-decoration: none;
 }
 
 .btn-delete {
   background: tomato;
 }
+
+/* ============== CONTACT-LINKS ============== */
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  gap: 0 var(--spacing);
+
+  margin-block: calc(var(--small-font-size) * 2);
+}
+
+/* ============== MEDIA-QUERIES ============== */
+
+
+@media (min-width: 600px) {
+  .single-contact {
+    max-width: 80%;
+    margin: calc(var(--spacing) * 2) auto;
+  }
+}
+
